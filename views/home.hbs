@@ -1,13 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Brush Script MT', cursive;
+  background-color: White;
+  border-radius: 50px;
+  max-height : 50%;
+    
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+    }
+  
+    
+}
+
+.title {
+  color: #051641;
+  font-size: 18px;
+}
+
+    .tit {
+  color: #051335;
+  font-size: 10px;
+    }
+   
+    .tis {
+  
+  color: Black;
+  font-size: 30px;
+    } .tik {
+  
+  color: WHite;
+  font-size: 30px;
+    }
+     .tip {
+  
+  color: BLack;
+  font-size: 30px;
+    }
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  font-size: 18px;
+  border-radius:1px;
+}
+
+a {
+  text-decoration: none;
+  font-size: px;
+  color: black;
+}
+.avatar {
+  vertical-align: left;
+  width: 100px;
+  height: 100px;
+  border-radius:50px;
+  border-width: 5%;
+  border-color:white;
+  
+  
+    }
+    body  {
+        background-image:url(https://res.cloudinary.com/dn9jwkw6e/image/upload/v1609308656/wallpaper.jpg);
+       background-repeat: no-repeat;
+        
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+    .button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+</style>
 </head>
 <body>
-    <div class='container text-center font-weight-bold'><h1>Hello {{userName}}</h1></div> 
-    <img width="200px" src="profile_image/{{profile_image}}" alt="profile pic">
-    <div class='container text-center font-weight-bold'><a href="/logout">Logout</a></div>
+<br>
+<br>
+<br>
+<div class="card">
+ <br>
+ <br>
+ <img src="profile_image/{{profile_image}}" class="avatar"/>
+   <p class="tis">Happy Xmas</p>   
+  <p class="tip">{{userName}} <p/> 
+  <p class="title">Followers : 00</p>
+  <p class="title">Likes : 00</p>
+  <p class="title">Following : 00</p>
+  <div class='container text-center font-weight-bold'><a href="/logout">Logout</a></div>
+<br>
+<br>
+<button class="button button2">View Feed</button><button class="button button2">Gallery</button>
+
+
+   
+  
+  <div style="margin: 24px 0;">
+    
+  </div>
+
+   
+  
+</div>
+    
 </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .avatar {
+        vertical-align: left;
+        width: 100px;
+        height: 100px;
+        border-radius:50px;
+        border-width: 5%;
+        border-color:white;
+        
+        
+            }
+        hr.new1 {
+        border-top: 1px solid red;
+        }
+    </style>
+</head>
+<body class="w3-container w3-border w3-large">
+    <h1 >Artify Users</h1>
+    <a href="/home">Home</a>
+    <ul class="user_list">
+        {{#each users}}
+            <li><img src="profile_image/{{this.img}}" class="avatar" alt="">{{this.name}}
+            {{#if this.follow_status}} 
+                <form action="/auth/unfollow" method="POST"><input name="end_user" value="{{this.id}}" hidden><button class="w3-button w3-red w3-small w3-padding-small">Unfollow</button><hr class="new1"></form> 
+                {{else}}
+                <form action="/auth/follow" method="POST"><input name="end_user" value="{{this.id}}" hidden><button class="w3-button w3-green w3-small w3-padding-small">Follow</button><hr class="new1"></form>
+            {{/if}}
+        {{/each}}
+
+    </ul>
+    
+</body>
+</html>

@@ -119,13 +119,18 @@ button:hover, a:hover {
  <img src="profile_image/{{profile_image}}" class="avatar"/>
    <p class="tis">Happy Xmas</p>   
   <p class="tip">{{userName}} <p/> 
-  <p class="title">Followers : 00</p>
+  <p class="title">Followers : {{followers}}</p>
   <p class="title">Likes : 00</p>
-  <p class="title">Following : 00</p>
+  <p class="title">Following : {{following}}</p>
   <div class='container text-center font-weight-bold'><a href="/logout">Logout</a></div>
 <br>
 <br>
-<button class="button button2">View Feed</button><button class="button button2">Gallery</button>
+<a href="#" class="bw3-button w3-black">View Feed</a><a href="#" class="bw3-button w3-black w3-margin-left">Gallery</a>
+<form action="/discover" method="GET"><input name="current" value="{{userid}}" hidden><button class="w3-button w3-black">Discover</button></form>
+
+
+
+
 
 
    

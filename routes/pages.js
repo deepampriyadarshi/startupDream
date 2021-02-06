@@ -1,6 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const router = express.Router();
+const controllers = require('../controllers/auth.js');
 
 
 
@@ -32,12 +33,16 @@ router.get('/login', redirectHome, (req,res) =>{
     res.render('index');
 });
 
-router.get('/home', redirectLogin, (req,res) =>{
-    res.render('home',{
-        userName: req.session.userName,
-        profile_image: req.session.profilePic,
-    });
-});
+// router.get('/home', redirectLogin, (req,res) =>{
+//     // res.render('home',{
+//     //     userName: req.session.userName,
+//     //     profile_image: req.session.profilePic,
+//     //     userid: req.session.userID,
+//     //     following: req.session.following
+//     // });
+// });
+
+router.get('/home', redirectLogin, controllers.home)
 
 router.get('/logout', redirectLogin, (req,res) => {
     req.session.destroy(err => {
@@ -48,6 +53,9 @@ router.get('/logout', redirectLogin, (req,res) => {
         res.redirect('/login')
     }) 
 })
+
+router.get('/discover', redirectLogin, controllers.discover)
+
 
 
 module.exports = router;
